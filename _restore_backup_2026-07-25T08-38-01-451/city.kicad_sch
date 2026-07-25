@@ -4504,7 +4504,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 31.75) (xy 107.95 31.75)
+			(xy 92.71 31.75) (xy 96.52 31.75)
 		)
 		(stroke
 			(width 0)
@@ -4601,6 +4601,16 @@
 			(type default)
 		)
 		(uuid "cd6ee484-fa61-4ec8-bdd8-acdf382d00df")
+	)
+	(wire
+		(pts
+			(xy 104.14 31.75) (xy 107.95 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdb7769f-c1da-4e7e-b218-7e7217313e5d")
 	)
 	(wire
 		(pts
@@ -7331,6 +7341,86 @@
 			(project "city"
 				(path "/b1ddaa20-940c-4f60-8736-83ba22b59fe0"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 100.33 31.75 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "51b87298-a589-4317-8374-1f76096971ce")
+		(property "Reference" "R3"
+			(at 100.33 25.4 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0R"
+			(at 100.33 27.94 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 100.33 33.528 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 100.33 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "94298c25-af5d-4fda-a84c-6daa9c4c07b7")
+		)
+		(pin "1"
+			(uuid "cfe667b4-90ac-4d0c-ab8b-1965acb62bc4")
+		)
+		(instances
+			(project "city"
+				(path "/b1ddaa20-940c-4f60-8736-83ba22b59fe0"
+					(reference "R3")
 					(unit 1)
 				)
 			)
