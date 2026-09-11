@@ -28,41 +28,8 @@ The design integrates the ESP32-C3 module with the supporting power, USB, reset,
 * Exposed 3.3 V, 5 V, and GND connections
 * Custom PCB layout and routing
 
-## Block Diagram
 
-```text
-                    USB-C
-                  ┌─────────┐
-                  │         │
-       VBUS ─────►│ Power   │
-                  │         │
-       D+ / D- ──►│ USB     │
-                  └────┬────┘
-                       │
-                ┌──────▼──────┐
-                │   5 V Rail  │
-                └──────┬──────┘
-                       │
-                ┌──────▼──────┐
-                │ AP2112K LDO │
-                │  5 V → 3.3 V│
-                └──────┬──────┘
-                       │
-                       ▼
-             ┌──────────────────┐
-             │  ESP32-C3-WROOM  │
-             │                  │
- USB D+ ────►│ USB              │
- USB D- ────►│                  │
-             │ GPIOs            │
-             │ UART / JTAG      │
-             └─────┬──────┬─────┘
-                   │      │
-             ┌─────▼─┐  ┌─▼────────┐
-             │ GPIO  │  │ JTAG/UART│
-             │Headers│  │  Header   │
-             └───────┘  └──────────┘
-```
+
 
 ## Hardware
 
@@ -94,22 +61,6 @@ The USB data lines connect directly to the ESP32-C3's native USB interface.
 The board accepts **5 V from USB-C**.
 
 A dedicated **AP2112K-3.3 LDO** generates the 3.3 V rail used by the ESP32-C3 and associated circuitry.
-
-```text
-USB-C VBUS
-    │
-    ▼
-  +5 V
-    │
-    ▼
-AP2112K-3.3
-    │
-    ▼
- +3.3 V
-    │
-    └── ESP32-C3
-```
-
 Decoupling capacitors are included around the power circuitry and ESP32-C3 supply.
 
 ### Reset and Boot
@@ -159,55 +110,11 @@ The PCB design process included:
 
 The design was developed with the intention of producing a physically usable development board rather than being purely a schematic exercise.
 
-## Repository Structure
-
-```text
-.
-├── hardware/
-│   ├── schematic/
-│   ├── pcb/
-│   └── libraries/
-├── documentation/
-├── README.md
-└── LICENSE
-```
-
-> The exact repository structure may change as the project develops.
-
-## Tools
-
-* **KiCad 10.0.5**
-* ESP32-C3-WROOM-02
-* USB-C
-* JTAG
-* UART
-* PCB Design
-* Schematic Capture
-
-## Project Status
+# Project Status
 
 **Hardware design completed.**
 
 The schematic and PCB routing have been completed. The next stage is hardware fabrication and bring-up, followed by firmware testing and validation of the USB, power, GPIO, and programming interfaces.
-
-## What This Project Demonstrates
-
-This project was designed to demonstrate practical embedded hardware and PCB-design skills, including:
-
-* Microcontroller hardware integration
-* USB-C interface design
-* Power-rail design
-* LDO selection and implementation
-* Decoupling
-* ESD protection
-* Reset and boot circuitry
-* GPIO planning
-* UART/JTAG interfaces
-* Schematic capture
-* PCB component placement
-* PCB routing
-* Design-for-manufacturing considerations
-
 ## Author
 
 **Yedidia Sisay**
